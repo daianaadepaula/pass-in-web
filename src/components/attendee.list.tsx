@@ -1,4 +1,5 @@
 import { Search, MoreHorizontal, ChevronLeft, ChevronsLeft, ChevronRight, ChevronsRight } from "lucide-react"
+
 import { IconButton } from "./icon-button"
 import { Table } from "./table/table"
 import { TableHeader } from "./table/table-header"
@@ -56,7 +57,7 @@ export function AttendeeList() {
 										<span>{attendee.email}</span>
 									</div>
 								</TableCell>
-								<TableCell>{attendee.createdAt.toISOString()}</TableCell>
+								<TableCell>{formatRelative(attendee.createdAt)}</TableCell>
 								<TableCell>{attendee.checkedInAt.toISOString()}</TableCell>
 								<TableCell>
 									<IconButton transparent>
